@@ -1,0 +1,19 @@
+.just-imagine-wrapper {
+    background-image: url(../img/imagine-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.just-imagine-box {
+    padding-top: 142px;
+    padding-bottom: 138.95px;
+}
+
+.just-imagine-list {
+    padding-left: 18px;
+}
+
+.white-list::before {
+    background-image: url(../img/heart-white.svg);
+    padding-left: 0;
+}

@@ -1,0 +1,80 @@
+/* Import */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Oswald:400,300,700);
+
+/* Variables */
+
+$background: #252827;
+
+$color-primary: #929292;
+$color-light: white;
+$spacing: 30.75px;
+$radius: 4px;
+
+$date: 120px;
+$dotborder: 4px;
+$dot: 20px;
+$line: 2px;
+
+.timeline {
+    display: block;
+    border-left: $line solid $color-primary;
+    position: relative;
+    padding: 0 0 0 50px;
+    list-style: none;
+    text-align: left;
+    left: 75px;
+    margin-bottom: 25px;
+
+    h5 {
+        color: #7a7a7a;
+        font-size: 18px;
+    }
+
+    .event {
+        position: relative;
+        margin-bottom: 67.7px;
+
+        &:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+
+        &:before {
+            left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;
+            color: #929292;
+            content: attr(data-date);
+            text-align: right;
+            font-weight: 100;
+            font-size: 0.9em;
+            min-width: $date;
+        }
+
+        &:after {
+            left: -62px;
+            background: $color-primary;
+            border-radius: 50%;
+            height: $dot;
+            width: $dot;
+            content: "";
+        }
+    }
+
+    .last-event::after {
+        top: 2px;
+    }
+
+    .event-show-more {
+        color: #006ce5;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
