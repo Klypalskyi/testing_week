@@ -1,0 +1,43 @@
+.waranty-row {
+    position: relative;
+    margin-top: 13.578125rem;
+
+    .eight-hours-footer {
+        display: flex;
+        flex-wrap: wrap;
+        border: 4px solid #af0000;
+        justify-content: center;
+        margin-bottom: 6.25rem;
+
+        .waranty-img-box {
+            max-width: min-content;
+            background: #fff;
+            align-self: center;
+            position: absolute;
+            top: -33%;
+            left: 50%;
+            transform: translate(-50%);
+            -webkit-transform: translate(-50%);
+            -moz-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+            -o-transform: translate(-50%);
+        }
+
+        .waranty-text-box {
+            padding: 13.6875rem 11.385rem 7.375rem;
+
+            .eight-hours-footer-h {
+                height: min-content;
+            }
+            
+            .waranty-text {
+                font-size: 1.25rem;
+            }
+
+            #get-in {
+                max-width: 36.5%;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

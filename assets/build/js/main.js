@@ -17952,23 +17952,35 @@ return Popper;
 //# sourceMappingURL=toast.js.map
 
 // Импортируем другие js-файлы
-let actionBtn = document.querySelector('.header-btn');
 
-actionBtn.addEventListener('click', clickBtnHandle)
 
-function clickBtnHandle(e) {
-    e.preventDefault();
-
+$('.js-btn').on('click', function (e) {
     const target = e.target;
 
-    target.classList.add('clicked');
+    if (target.classList.contains('unclick')) {
+        target.classList.remove('unclick');
+        target.classList.add('clicked');
 
-    // target.style.add("background: linear-gradient(to top, #0f0808, #af0000)")
+        setTimeout(function () {
+            target.classList.remove('clicked');
+            target.classList.add('unclick');
+        }, 135);
+    }
+});
 
-    // setTimeout( function() {
-    //     target.classList.remove('clicked')
-    // }, 5000)
-}
+$('.event-show-more').on('click', function (e) {
+    const target = e.target;
+    const block = target.previousElementSibling;
+
+    if (block.classList.contains('hidden')) {
+        block.classList.remove('hidden');
+        target.innerHTML = "Свернуть  <span class='show-arrow'>&#9650</span>";
+    } else if (!block.classList.contains('hidden')) {
+        block.classList.add('hidden');
+        target.innerHTML = "Подробнее  <span class='show-arrow'>&#9660</span>";
+    }
+
+})
 $.getJSON("https://api.ipify.org/?format=json", function (e) {
     let deadline = new Date(Date.parse(new Date()) + 1 * 1 * 8 * 60 * 1000);
 
@@ -17980,16 +17992,194 @@ $.getJSON("https://api.ipify.org/?format=json", function (e) {
         let minutes = Math.floor(t / 1000 / 60 % 60);
 
 
-        let timerMs = document.querySelector('#time-msec');
-        let timerSeconds = document.querySelector('#time-sec');
-        let timerMinutes = document.querySelector('#time-min');
+        let timerMs = [...document.querySelectorAll('#time-msec')];
+        let timerSeconds = [...document.querySelectorAll('#time-sec')];
+        let timerMinutes = [...document.querySelectorAll('#time-min')];
 
 
-        timerMs.innerHTML = ms >= 10 ? `${ms}` : `0${ms}`;
-        timerSeconds.innerHTML = seconds >= 10 ? `${seconds}&nbsp<span>:</span>` : `0${seconds}<span>:</span>`;
-        timerMinutes.innerHTML = minutes >= 10 ? `${minutes}&nbsp<span>:</span>` : `0${minutes}<span>:</span>`;
+        if (t > 0) {
+            for (let i of timerMs) {
+                i.innerHTML = ms >= 10 ? `${ms}` : `0${ms}`;
+            }
+            for (let i of timerSeconds) {
+                i.innerHTML = seconds >= 10 ? `${seconds}&nbsp:` : `0${seconds}&nbsp:`;
+            }
+            for (let i of timerMinutes) {
+                i.innerHTML = minutes >= 10 ? `${minutes}&nbsp:` : `0${minutes}&nbsp:`;
+            }
+        } else {
+            for (let i of timerMs) {
+                i.innerHTML = `00`;
+            }
+            for (let i of timerMs) {
+                i.innerHTML = `00&nbsp:`;
+            }
+            for (let i of timerMs) {
+                i.innerHTML = `00&nbsp:`;
+            }
 
+
+        }
     }
     setInterval(timer, 90)
 
+});
+var map;
+var point;
+var mapLatLng = new google.maps.LatLng(50.414307, 30.520547);
+var pointLatLng = new google.maps.LatLng(50.415203, 30.523433);
+
+let style = [{
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#f5f5f5"
+    }]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [{
+      "visibility": "off"
+    }]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#616161"
+    }]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+      "color": "#f5f5f5"
+    }]
+  },
+  {
+    "featureType": "administrative",
+    "stylers": [{
+      "weight": 0.5
+    }]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#bdbdbd"
+    }]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#eeeeee"
+    }]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#757575"
+    }]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#e5e5e5"
+    }]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#9e9e9e"
+    }]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [{
+      "color": "#c0c0c0"
+    }]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#757575"
+    }]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#dadada"
+    }]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#616161"
+    }]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#9e9e9e"
+    }]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#e5e5e5"
+    }]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#eeeeee"
+    }]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [{
+      "color": "#0f5c79"
+    }]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [{
+      "color": "#2b4784"
+    }]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+      "color": "#9e9e9e"
+    }]
+  }
+]
+
+map = new google.maps.Map(document.getElementById('google-map'), {
+  center: mapLatLng,
+  zoom: 16,
+  panControl: false,
+  zoomControl: false,
+  scaleControl: false,
+  fullscreenControl: false,
+  streetViewControl: false,
+  draggable: false
+});
+
+point = new google.maps.Marker({
+  position: pointLatLng,
+  title: 'Marker',
+  map: map,
+  draggable: false
 });

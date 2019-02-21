@@ -3,6 +3,7 @@
 @import "font_gotham";
 @import "static";
 
+
 // Подключение нужных SCSS исходников Bootstrap 4
 @import "../../../node_modules/bootstrap/scss/_functions";
 @import "../../../node_modules/bootstrap/scss/_variables";
@@ -42,12 +43,13 @@
 @import "../../../node_modules/bootstrap/scss/_utilities";
 @import "../../../node_modules/bootstrap/scss/_print";
 
+
 // Подключение своих SCSS файлов
 @import "a_header";
 @import "b_if-you";
 @import "c_just-imagine";
 @import "d_after-eight-hours";
-@import "e_reviews-slider";
+@import "e_reviews-short";
 @import "f_introduce";
 @import "g_schedule";
 @import "h_timer";

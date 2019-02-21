@@ -1,0 +1,43 @@
+.introduce-container {
+    padding-top: 6.291875rem;
+    margin-bottom: 6.4375rem;
+    max-height: min-content;
+
+    .introduce-img-box {
+        max-width: min-content;
+
+        .introduce-image-top {
+            margin-bottom: 2.4375rem;
+        }
+    }
+
+    .introduce-text-box {
+        min-width: min-content;
+        max-height: min-content;
+
+        .introduce-title-box {
+            margin-bottom: 2.484375rem;
+
+            .introduce-title {
+                font-size: 2.125rem;
+                line-height: 2.6875rem;
+
+                span {
+                    color: $violet;
+                }
+            }
+
+            .introduce-under-h {
+                display: inline;
+                background: $violet;
+                font-size: 1.25rem;
+                padding: 0.35rem 0;
+                
+            }
+        }
+
+        .main-text:last-of-type {
+            margin: 0;
+        }
+    }
+}

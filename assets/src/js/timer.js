@@ -9,15 +9,34 @@ $.getJSON("https://api.ipify.org/?format=json", function (e) {
         let minutes = Math.floor(t / 1000 / 60 % 60);
 
 
-        let timerMs = document.querySelector('#time-msec');
-        let timerSeconds = document.querySelector('#time-sec');
-        let timerMinutes = document.querySelector('#time-min');
+        let timerMs = [...document.querySelectorAll('#time-msec')];
+        let timerSeconds = [...document.querySelectorAll('#time-sec')];
+        let timerMinutes = [...document.querySelectorAll('#time-min')];
 
 
-        timerMs.innerHTML = ms >= 10 ? `${ms}` : `0${ms}`;
-        timerSeconds.innerHTML = seconds >= 10 ? `${seconds}&nbsp<span>:</span>` : `0${seconds}<span>:</span>`;
-        timerMinutes.innerHTML = minutes >= 10 ? `${minutes}&nbsp<span>:</span>` : `0${minutes}<span>:</span>`;
+        if (t > 0) {
+            for (let i of timerMs) {
+                i.innerHTML = ms >= 10 ? `${ms}` : `0${ms}`;
+            }
+            for (let i of timerSeconds) {
+                i.innerHTML = seconds >= 10 ? `${seconds}&nbsp:` : `0${seconds}&nbsp:`;
+            }
+            for (let i of timerMinutes) {
+                i.innerHTML = minutes >= 10 ? `${minutes}&nbsp:` : `0${minutes}&nbsp:`;
+            }
+        } else {
+            for (let i of timerMs) {
+                i.innerHTML = `00`;
+            }
+            for (let i of timerMs) {
+                i.innerHTML = `00&nbsp:`;
+            }
+            for (let i of timerMs) {
+                i.innerHTML = `00&nbsp:`;
+            }
 
+
+        }
     }
     setInterval(timer, 90)
 

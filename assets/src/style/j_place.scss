@@ -1,0 +1,68 @@
+.map-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #e63d63;
+    border-bottom: 1px solid #e63d63;
+
+    #google-map {
+        max-height: 37.5rem;
+        z-index: -1;
+        position: unset !important;
+    }
+
+    img[src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png"],
+    a[href="http://maps.google.com/maps"],
+    a[href="https://www.google.com/intl/uk-UA_US/help/terms_maps.html"],
+    .gm-style-mtc {
+        display: none !important;
+    }
+}
+
+
+.place-container {
+
+    .pink-box {
+        margin: 7.0625rem 0;
+        box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.1);
+        padding-top: 5.375rem;
+        padding-left: 2.5625rem;
+        padding-right: 2.5rem;
+        padding-bottom: 3.958125rem;
+        border-radius: 0.3125rem;
+        -webkit-border-radius: 0.3125rem;
+        -moz-border-radius: 0.3125rem;
+        -ms-border-radius: 0.3125rem;
+        -o-border-radius: 0.3125rem;
+
+        .place-title {
+            font-size: 2.25rem;
+            line-height: 4.375rem;
+            margin-bottom: 1.595rem;
+        }
+
+        .place-info-address,
+        .place-info-date,
+        .place-info-phone {
+            letter-spacing: normal;
+            font-size: 1rem;
+            line-height: 1.625rem;
+            margin-bottom: 0;
+        }
+
+        .place-info-date,
+        .place-info-phone {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .place-img {
+            margin-right: 1rem;
+        }
+
+        .address-box,
+        .date-box {
+            margin-bottom: 2.0625rem;
+        }
+
+    }
+}

@@ -1,0 +1,33 @@
+.ps-wrapper {
+    background-image: url(../img/ps-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5.82812rem;
+    padding-bottom: 7.020625rem;
+
+    .ps-image {
+        margin-bottom: 1.25rem;
+    }
+
+    .ps-violet {
+        display: block;
+        background: $violet;
+        font-size: 1.5rem;
+        max-width: max-content;
+        padding: 0 0.8125rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .ps-main-text-box {
+        margin-bottom: 3.375rem;
+
+        .ps-main-text {
+            font-size: 1.25rem;
+        }
+    }
+
+    .js-btn {
+        max-width: 60%;
+        margin-bottom: 0;
+    }
+}

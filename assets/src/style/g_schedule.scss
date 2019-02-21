@@ -6,25 +6,59 @@
 
 $background: #252827;
 
-$color-primary: #929292;
+$color-primary: #f56255;
 $color-light: white;
 $spacing: 30.75px;
 $radius: 4px;
 
 $date: 120px;
 $dotborder: 4px;
-$dot: 20px;
+$dot: 15px;
 $line: 2px;
+
+.schedule-container {
+    min-width: 100%;
+    background: linear-gradient(120deg, #fc734f, #e43762);
+    padding-bottom: 7.25rem;
+    margin-bottom: 7.25rem;
+
+    .main-title {
+        margin-top: 6.25rem;
+        margin-bottom: 1.09375rem;
+    }
+
+    .schedule-under-h {
+        font-size: 1.25rem;
+        margin-bottom: 3.85625rem;
+    }
+}
+
+.timeline-container {
+    background: #fff;
+    border-radius: 0.875rem;
+    width: 100%;
+    -webkit-border-radius: 0.875rem;
+    -moz-border-radius: 0.875rem;
+    -ms-border-radius: 0.875rem;
+    -o-border-radius: 0.875rem;
+    box-shadow: 0.3125rem 0.3125rem 3.75rem rgba(0, 0, 0, 0.1);
+
+    .col-12 {
+        padding: 5.0625rem 4.875rem 5.875rem 17.625rem;
+    }
+
+}
 
 .timeline {
     display: block;
     border-left: $line solid $color-primary;
     position: relative;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 1.875rem;
     list-style: none;
     text-align: left;
     left: 75px;
     margin-bottom: 25px;
+    z-index: 100;
 
     h5 {
         color: #7a7a7a;
@@ -33,6 +67,7 @@ $line: 2px;
 
     .event {
         position: relative;
+        top: 0;
         margin-bottom: 67.7px;
 
         &:last-of-type {
@@ -50,31 +85,90 @@ $line: 2px;
 
         &:before {
             left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;
-            color: #929292;
+            color: #000;
+            font-family: 'Gotham Pro', sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.002em;
             content: attr(data-date);
             text-align: right;
             font-weight: 100;
-            font-size: 0.9em;
             min-width: $date;
+            top: 5px;
         }
 
         &:after {
-            left: -62px;
+            left: -38.5px;
             background: $color-primary;
             border-radius: 50%;
             height: $dot;
             width: $dot;
             content: "";
+            top: 10px;
+        }
+
+        .event-hidden-text {
+            margin-bottom: 1.5625rem;
+        }
+        
+    }
+
+    .reg-event {
+        margin-bottom: 48.7px;
+
+        .event-section {
+            position: relative;
+            top: -19px;
+        }
+
+        &:after {
+            left: -45.5px;
+            background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
+            border-radius: 50%;
+            height: $dot*2;
+            width: $dot*2;
+            content: "";
+            z-index: 120;
+            top: -15px;
+        }
+
+        &:before {
+            top: -12px;
+        }
+
+    }
+
+    .last-event {
+
+        .event-section {
+            position: relative;
+            top: 13px;
+        }
+
+        &:after {
+            left: -45.5px;
+            background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
+            border-radius: 50%;
+            height: $dot*2;
+            width: $dot*2;
+            content: "";
+            z-index: 120;
+            top: 15px;
         }
     }
 
-    .last-event::after {
-        top: 2px;
+    .event-section {
+        font-family: 'Gotham Pro', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        letter-spacing: 0.002em;
+    }
+
+    .event-title {
+        font-size: 1.25rem;
     }
 
     .event-show-more {
-        color: #006ce5;
-        text-decoration: underline;
+        color: #f56255;
         cursor: pointer;
     }
 }
