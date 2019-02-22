@@ -1,0 +1,99 @@
+@media (min-width: 480px) {
+    .slider-for {
+        display: none;
+
+        .slider-item {
+            max-width: 41.25rem;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: auto;
+            }
+        }
+    }
+
+
+    .slider-nav {
+
+        .slick-track {
+            margin-top: 2rem;
+
+            .slick-slide {
+                transition-duration: 500ms;
+                transition-timing-function: linear;
+            }
+        }
+
+
+
+        .slider-item {
+            max-width: 20rem;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: auto;
+                opacity: 0.5;
+                margin-bottom: 1.5rem;
+                padding-right: 1rem;
+                cursor: pointer;
+
+
+                &:hover {
+                    transform: scale(1.05);
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+                    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+        .slick-current {
+            transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+
+            img {
+                opacity: 1;
+            }
+
+        }
+
+        .slick-prev::before,
+        .slick-next::before {
+            color: #333333;
+        }
+
+        .slick-prev:hover::before,
+        .slick-next:hover::before {
+            color: #e73d64;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .slider-for {
+        display: block;
+    }
+
+    .slider-nav {
+        .slick-current {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+        }
+
+        .slider-item {
+            img {
+                padding-right: 0;
+            }
+        }
+    }
+}

@@ -19,6 +19,7 @@
 //= ../../../node_modules/bootstrap/js/dist/toast.js
 
 // Импортируем другие js-файлы
+//= slick.js
 //= my.js
 //= timer.js
 //= map.js

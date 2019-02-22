@@ -1,4 +1,23 @@
-
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+    autoplay: true,
+    autoplaySpeed: 2500,
+    infinite: true
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    arrows: true,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+    pauseOnFocus: true
+});
 
 $('.js-btn').on('click', function (e) {
     const target = e.target;
@@ -27,4 +46,3 @@ $('.event-show-more').on('click', function (e) {
     }
 
 })
-

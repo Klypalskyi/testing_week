@@ -45,6 +45,7 @@
 
 
 // Подключение своих SCSS файлов
+
 @import "a_header";
 @import "b_if-you";
 @import "c_just-imagine";
@@ -59,3 +60,6 @@
 @import "l_garanty";
 @import "m_ps";
 @import "n_footer";
+@import "slick";
+@import "slick-theme";
+@import "slides";
