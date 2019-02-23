@@ -1,12 +1,32 @@
-.if-you-box {
-    padding-top: 62.21px;
-    padding-bottom: 121px;
+@media(min-width: 320px) {
+    .if-you-container {
+        padding-top: 2.48rem;
+        padding-bottom: 5.15625rem;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .if-you-left {
+            margin-bottom: 2.0625rem;
+        }
+
+        .if-you-list {
+            margin-bottom: 0;
+        }
+    }
 }
 
-.if-you-list {
-    padding-left: 18px;
-}
+// .if-you-box {
+//     padding-top: 62.21px;
+//     padding-bottom: 121px;
+// }
 
-.if-you-image {
-    max-width: 427px;
-}
+// .if-you-list {
+//     padding-left: 18px;
+// }
+
+// .if-you-image {
+//     max-width: 427px;
+// }

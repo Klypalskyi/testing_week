@@ -20964,71 +20964,74 @@ return Popper;
 
 }));
 $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav',
-    autoplay: true,
-    autoplaySpeed: 2500,
-    infinite: true
-});
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav',
+  autoplay: true,
+  autoplaySpeed: 2500,
+  dots: true,
+  infinite: true
+})
 $('.slider-nav').slick({
-    slidesToShow: 3,
-    arrows: true,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-    pauseOnFocus: true
-});
+  asNavFor: '.slider-for',
+  focusOnSelect: true,
+  pauseOnFocus: true,
+  dots: true,
+  arrows: true,
+  centerMode: true,
+  infinite: true
+})
 
 $('.js-btn').on('click', function (e) {
-    const target = e.target;
+  const target = e.target
 
-    if (target.classList.contains('unclick')) {
-        target.classList.remove('unclick');
-        target.classList.add('clicked');
+  if (target.classList.contains('unclick')) {
+    target.classList.remove('unclick')
+    target.classList.add('clicked')
 
-        setTimeout(function () {
-            target.classList.remove('clicked');
-            target.classList.add('unclick');
-        }, 135);
-    }
-});
+    setTimeout(function () {
+      target.classList.remove('clicked')
+      target.classList.add('unclick')
+    }, 135)
+  }
+})
 
 $('.event-show-more').on('click', function (e) {
-    const target = e.target;
-    const block = target.previousElementSibling;
+  const target = e.target
+  const block = target.previousElementSibling
 
-    if (block.classList.contains('hidden')) {
-        block.classList.remove('hidden');
-        target.innerHTML = "Свернуть  <span class='show-arrow'>&#9650</span>";
-    } else if (!block.classList.contains('hidden')) {
-        block.classList.add('hidden');
-        target.innerHTML = "Подробнее  <span class='show-arrow'>&#9660</span>";
-    }
-
+  if (block.classList.contains('hidden')) {
+    block.classList.remove('hidden')
+    target.innerHTML = "Свернуть  <span class='show-arrow'>&#9650</span>"
+  } else if (!block.classList.contains('hidden')) {
+    block.classList.add('hidden')
+    target.innerHTML = "Подробнее  <span class='show-arrow'>&#9660</span>"
+  }
 })
 
 $(document).ready(function () {
-    $("#review-a").on("click", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
+  $('#review-a').on('click', function (event) {
+    // отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault()
 
-        //забираем идентификатор бока с атрибута href
-        var id = $(this).attr('href'),
+    // забираем идентификатор бока с атрибута href
+    var id = $(this).attr('href')
 
-            //узнаем высоту от начала страницы до блока на который ссылается якорь
-            top = $(id).offset().top;
+    // узнаем высоту от начала страницы до блока на который ссылается якорь
 
-        //анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({
-            scrollTop: top
-        }, 1500);
-    });
-});
+    var top = $(id).offset().top
+
+    // анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate(
+      {
+        scrollTop: top
+      },
+      1500
+    )
+  })
+})
 $.getJSON("https://api.ipify.org/?format=json", function (e) {
     let deadline = new Date(Date.parse(new Date()) + 1 * 1 * 8 * 60 * 1000);
 
@@ -21074,7 +21077,7 @@ $.getJSON("https://api.ipify.org/?format=json", function (e) {
 });
 var map;
 var point;
-var mapLatLng = new google.maps.LatLng(50.414307, 30.520547);
+var mapLatLng = new google.maps.LatLng(50.418081, 30.523273);
 var pointLatLng = new google.maps.LatLng(50.415203, 30.523433);
 
 let style = [{

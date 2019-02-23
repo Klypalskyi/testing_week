@@ -16,49 +16,65 @@ $dotborder: 4px;
 $dot: 15px;
 $line: 2px;
 
-.schedule-container {
-    min-width: 100%;
-    background: linear-gradient(120deg, #fc734f, #e43762);
-    padding-bottom: 7.25rem;
-    margin-bottom: 7.25rem;
+@media(min-width: 320px) {
+    .schedule-container {
+        // min-width: 100%;
+        background: linear-gradient(120deg, #fc734f, #e43762);
+        // padding-top: 6.25rem;
+        padding-top: 3.104375rem;
+        padding-bottom: 2.975rem;
 
-    .main-title {
-        margin-top: 6.25rem;
-        margin-bottom: 1.09375rem;
+        .main-title {
+            font-size: 2.75rem;
+            line-height: 3.25rem;
+            margin-bottom: 1.791875rem;
+        }
+
+        .schedule-under-h {
+            font-size: 1.25rem;
+            margin-bottom: 3.85625rem;
+        }
     }
 
-    .schedule-under-h {
-        font-size: 1.25rem;
-        margin-bottom: 3.85625rem;
+    .timeline-container {
+        background: #fff;
+        border-radius: 0.875rem;
+        width: 100%;
+        -webkit-border-radius: 0.875rem;
+        -moz-border-radius: 0.875rem;
+        -ms-border-radius: 0.875rem;
+        -o-border-radius: 0.875rem;
+        box-shadow: 0.3125rem 0.3125rem 3.75rem rgba(0, 0, 0, 0.1);
+        padding-top: 4.4375rem;
+        padding-bottom: 2.925rem;
+
+
+        .timeline {
+            display: block;
+            border-left: $line solid $color-primary;
+            position: relative;
+            padding: 0 0 0 1.25rem;
+            list-style: none;
+            text-align: left;
+            left: 25px;
+            margin-bottom: 25px;
+            z-index: 100;
+            margin-right: -20px;
+            max-width: 80%;
+            
+            ol {
+                font-size: 1.125rem;
+                padding-left: 20px;
+                line-height: 1.35rem;
+            }
+
+            li {
+                margin-bottom: 1.125rem;
+            }
+        }
     }
-}
 
-.timeline-container {
-    background: #fff;
-    border-radius: 0.875rem;
-    width: 100%;
-    -webkit-border-radius: 0.875rem;
-    -moz-border-radius: 0.875rem;
-    -ms-border-radius: 0.875rem;
-    -o-border-radius: 0.875rem;
-    box-shadow: 0.3125rem 0.3125rem 3.75rem rgba(0, 0, 0, 0.1);
-
-    .col-12 {
-        padding: 5.0625rem 4.875rem 5.875rem 17.625rem;
-    }
-
-}
-
-.timeline {
-    display: block;
-    border-left: $line solid $color-primary;
-    position: relative;
-    padding: 0 0 0 1.875rem;
-    list-style: none;
-    text-align: left;
-    left: 75px;
-    margin-bottom: 25px;
-    z-index: 100;
+    // 
 
     h5 {
         color: #7a7a7a;
@@ -68,7 +84,8 @@ $line: 2px;
     .event {
         position: relative;
         top: 0;
-        margin-bottom: 67.7px;
+        // margin-bottom: 67.7px;
+        margin-bottom: 40px;
 
         &:last-of-type {
             padding-bottom: 0;
@@ -76,7 +93,7 @@ $line: 2px;
             border: none;
         }
 
-        &:before,
+        // &:before,
         &:after {
             position: absolute;
             display: block;
@@ -97,19 +114,19 @@ $line: 2px;
         }
 
         &:after {
-            left: -38.5px;
+            left: -28.5px;
             background: $color-primary;
             border-radius: 50%;
             height: $dot;
             width: $dot;
             content: "";
-            top: 10px;
+            top: 5px;
         }
 
         .event-hidden-text {
             margin-bottom: 1.5625rem;
         }
-        
+
     }
 
     .reg-event {
@@ -117,35 +134,37 @@ $line: 2px;
 
         .event-section {
             position: relative;
-            top: -19px;
+            // top: -19px;
         }
 
         &:after {
-            left: -45.5px;
+            left: -36.5px;
             background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
             border-radius: 50%;
             height: $dot*2;
             width: $dot*2;
             content: "";
             z-index: 120;
-            top: -15px;
+            top: -7px;
         }
 
-        &:before {
-            top: -12px;
-        }
+        // &:before {
+        //     top: -25px;
+        // }
 
     }
 
     .last-event {
+        margin-bottom: 0;
 
         .event-section {
             position: relative;
             top: 13px;
+            margin-bottom: 0;
         }
 
         &:after {
-            left: -45.5px;
+            left: -36.5px;
             background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
             border-radius: 50%;
             height: $dot*2;
@@ -172,3 +191,15 @@ $line: 2px;
         cursor: pointer;
     }
 }
+
+
+// @media(min-width: 480px) {
+
+//     .timeline-container {
+//         .col-12 {
+//             padding: 5.0625rem 4.875rem 5.875rem 17.625rem;
+//         }
+//     }
+
+
+// }

@@ -1,19 +1,42 @@
-.just-imagine-wrapper {
-    background-image: url(../img/imagine-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+@media(min-width: 320px) {
+
+    .just-imagine-wrapper {
+        background-image: url(../img/imagine-320-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 2.68125rem;
+        padding-bottom: 4.82625rem;
+
+        .just-imagine-left {
+            margin-bottom: 2.3125rem;
+        }
+
+        .just-imagine-right {
+
+            .just-imagine-h4{
+                line-height: 3.3125rem;
+                margin-bottom: 2.2275rem;
+            }
+
+            .white-list::before {
+                background-image: url(../img/heart-white.svg);
+                padding-left: 0;
+            }
+        }
+    }
+
+    
 }
 
-.just-imagine-box {
-    padding-top: 142px;
-    padding-bottom: 138.95px;
-}
 
-.just-imagine-list {
-    padding-left: 18px;
-}
 
-.white-list::before {
-    background-image: url(../img/heart-white.svg);
-    padding-left: 0;
-}
+
+// .just-imagine-box {
+//     padding-top: 142px;
+//     padding-bottom: 138.95px;
+// }
+
+// .just-imagine-list {
+//     padding-left: 18px;
+// }
+

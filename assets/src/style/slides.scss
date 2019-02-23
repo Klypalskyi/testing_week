@@ -1,9 +1,9 @@
 @media (min-width: 320px) {
     .slider-for {
-        display: none;
+
 
         .slider-item {
-            max-width: 41.25rem;
+            padding-bottom: 1.5rem;
 
             img {
                 max-width: 100%;
@@ -11,10 +11,21 @@
                 margin: auto;
             }
         }
+
+        .slick-prev::before,
+        .slick-next::before {
+            color: #333333;
+        }
+
+        .slick-prev:hover::before,
+        .slick-next:hover::before {
+            color: #e73d64;
+        }
     }
 
 
     .slider-nav {
+        display: none;
 
         .slick-track {
             margin-top: 2rem;
@@ -36,7 +47,6 @@
                 margin: auto;
                 opacity: 0.5;
                 margin-bottom: 1.5rem;
-                padding-right: 1rem;
                 cursor: pointer;
 
 
@@ -46,7 +56,7 @@
                     -moz-transform: scale(1.05);
                     -ms-transform: scale(1.05);
                     -o-transform: scale(1.05);
-                    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+                    box-shadow: 0 0.35rem 0.35rem rgba(0, 0, 0, 0.2);
                 }
             }
         }

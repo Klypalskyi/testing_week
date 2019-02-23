@@ -1,6 +1,6 @@
 var map;
 var point;
-var mapLatLng = new google.maps.LatLng(50.414307, 30.520547);
+var mapLatLng = new google.maps.LatLng(50.418081, 30.523273);
 var pointLatLng = new google.maps.LatLng(50.415203, 30.523433);
 
 let style = [{
