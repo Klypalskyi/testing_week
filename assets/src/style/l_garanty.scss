@@ -13,7 +13,7 @@
             margin-bottom: 4.1875rem;
 
             .waranty-img-box {
-                width: 9.9375rem;
+                max-width: 9.9375rem;
                 background: #fff;
                 align-self: center;
                 position: absolute;
@@ -44,6 +44,64 @@
                     font-size: 1.25rem;
                     margin-bottom: 0;
                 }
+            }
+        }
+    }
+}
+
+@media(min-width: 960px) {
+    .waranty-row {
+        margin-top: 13.578125rem;
+
+        .eight-hours-footer {
+            margin-bottom: 6.25rem;
+
+            // .waranty-img-box {
+            //     // width: 18.9375rem;
+            //     // top:- 50%;
+            //     // left: 50%;
+            //     // transform: translate(-50%);
+            //     // -webkit-transform: translate(-50%);
+            //     // -moz-transform: translate(-50%);
+            //     // -ms-transform: translate(-50%);
+            //     // -o-transform: translate(-50%);
+
+            //     // img {
+            //     //     width: 100%;
+            //     //     height: auto;
+            //     }
+            // }
+
+            // .waranty-text-box {
+            //     padding: 13.6875rem 11.385rem 7.375rem;
+            // }
+        }
+    }
+}
+
+@media (min-width: 1140px) {
+    .waranty-row {
+
+        .eight-hours-footer {
+
+            .waranty-img-box {
+                max-width: 18.9375rem;
+                top: -9.46875rem;
+                left: 50%;
+                transform: translate(-50%);
+                -webkit-transform: translate(-50%);
+                -moz-transform: translate(-50%);
+                -ms-transform: translate(-50%);
+                -o-transform: translate(-50%);
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .waranty-text-box {
+                padding: 13.6875rem 11.385rem 7.375rem;
             }
         }
     }

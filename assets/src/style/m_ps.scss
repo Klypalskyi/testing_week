@@ -1,33 +1,74 @@
-.ps-wrapper {
-    background-image: url(../img/ps-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 5.82812rem;
-    padding-bottom: 7.020625rem;
+@media(min-width: 320px) {
+    .ps-wrapper {
+        background-image: url(../img/ps-320-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 5.8125rem;
+        padding-bottom: 37.1875rem;
 
-    .ps-image {
-        margin-bottom: 1.25rem;
-    }
-
-    .ps-violet {
-        display: block;
-        background: $violet;
-        font-size: 1.5rem;
-        max-width: max-content;
-        padding: 0 0.8125rem;
-        margin-bottom: 1.75rem;
-    }
-
-    .ps-main-text-box {
-        margin-bottom: 3.375rem;
-
-        .ps-main-text {
-            font-size: 1.25rem;
+        .ps-image {
+            margin-bottom: 1.25rem;
         }
-    }
 
-    .js-btn {
-        max-width: 60%;
-        margin-bottom: 0;
+        .ps-violet {
+            display: block;
+            background: $violet;
+            font-size: 1.5rem;
+            max-width: max-content;
+            padding: 0 0.8125rem;
+            margin-bottom: 2.8125rem;
+        }
+
+        .ps-main-text-box {
+            margin-bottom: 3.0625rem;
+
+            .ps-main-text {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+        }
+
+
     }
 }
+
+@media (min-width: 480px) {
+    .ps-wrapper {
+       padding-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .ps-wrapper {
+        background-image: url(../img/ps-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+                
+        padding-top: 5.82812rem;
+        padding-bottom: 7.020625rem;
+
+        .ps-violet {
+            margin-bottom: 1.75rem;
+        }
+
+        .ps-main-text-box {
+            margin-bottom: 3.375rem;
+        }
+
+        .js-btn {
+            max-width: 60%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// }

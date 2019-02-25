@@ -1,20 +1,16 @@
-
 @media(min-width: 320px) {
     .footer-wrapper {
-        // background-image: url(../img/footer-bg.png);
         background-image: url(../img/footer-320-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    
+
         .container {
             padding: 2.6875rem 0;
             text-align: center;
-    
+
             .footer-link {
                 font-size: 0.8125rem;
                 color: #b8b8b8;
                 text-decoration: none;
-               
+
             }
 
             .link-box {
@@ -27,6 +23,19 @@
 
             .sign-box {
                 margin-top: 3.0625rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-wrapper {
+        .container {
+            display: flex;
+            justify-content: space-around;
+
+            .sign-box {
+                margin: 0;
             }
         }
     }

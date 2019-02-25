@@ -144,11 +144,10 @@ map = new google.maps.Map(document.getElementById('google-map'), {
   center: mapLatLng,
   zoom: 16,
   panControl: false,
-  zoomControl: false,
+  zoomControl: true,
   scaleControl: false,
   fullscreenControl: false,
-  streetViewControl: false,
-  draggable: false
+  streetViewControl: true
 });
 
 point = new google.maps.Marker({

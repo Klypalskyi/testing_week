@@ -27,7 +27,7 @@ body {
     color: $white;
 }
 
-.hidden {
+.hidden, .modal-hidden {
     display: none;
 }
 
@@ -98,7 +98,7 @@ body {
     }
 }
 
-@media(min-width: 480px) {
+@media(min-width: 992px) {
 
     .list-item {
         font-family: "Gotham Pro", sans-serif;

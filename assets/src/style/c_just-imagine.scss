@@ -4,6 +4,7 @@
         background-image: url(../img/imagine-320-bg.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         padding-top: 2.68125rem;
         padding-bottom: 4.82625rem;
 
@@ -13,7 +14,7 @@
 
         .just-imagine-right {
 
-            .just-imagine-h4{
+            .just-imagine-h4 {
                 line-height: 3.3125rem;
                 margin-bottom: 2.2275rem;
             }
@@ -25,18 +26,19 @@
         }
     }
 
-    
+
+}
+
+@media(min-width: 768px) {
+    .just-imagine-wrapper {
+        background-image: url(../img/imagine-bg.png);
+    }
 }
 
 
+@media(min-width: 960px) {
 
-
-// .just-imagine-box {
-//     padding-top: 142px;
-//     padding-bottom: 138.95px;
-// }
-
-// .just-imagine-list {
-//     padding-left: 18px;
-// }
-
+    .just-imagine-list {
+        padding-left: 18px;
+    }
+}

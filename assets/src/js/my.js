@@ -5,6 +5,8 @@ $('.slider-for').slick({
   fade: true,
   asNavFor: '.slider-nav',
   autoplay: true,
+  focusOnSelect: true,
+  pauseOnFocus: true,
   autoplaySpeed: 2500,
   dots: true,
   infinite: true
@@ -15,6 +17,8 @@ $('.slider-nav').slick({
   pauseOnFocus: true,
   dots: true,
   arrows: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
   centerMode: true,
   infinite: true
 })
@@ -31,6 +35,26 @@ $('.js-btn').on('click', function (e) {
       target.classList.add('unclick')
     }, 135)
   }
+
+
+});
+
+$('.header-btn').on('click', function () {
+  const modal = document.querySelector('.js-modal-backdrop');
+  const closeModal = document.querySelector('.modalbox__close-btn');
+
+  (function () {
+    modal.classList.remove('modal-hidden');
+
+  })();
+
+  modal.addEventListener('click', hidd);
+  closeModal.addEventListener('click', hidd);
+
+  function hidd(event) {
+    if (this !== event.target) return;
+    modal.classList.add('modal-hidden');
+  };
 })
 
 $('.event-show-more').on('click', function (e) {
@@ -59,8 +83,7 @@ $(document).ready(function () {
     var top = $(id).offset().top
 
     // анимируем переход на расстояние - top за 1500 мс
-    $('body,html').animate(
-      {
+    $('body,html').animate({
         scrollTop: top
       },
       1500

@@ -61,7 +61,7 @@ $line: 2px;
             z-index: 100;
             margin-right: -20px;
             max-width: 80%;
-            
+
             ol {
                 font-size: 1.125rem;
                 padding-left: 20px;
@@ -193,13 +193,171 @@ $line: 2px;
 }
 
 
-// @media(min-width: 480px) {
+@media(min-width: 992px) {
+    .schedule-container {
+        padding-top: 6.25rem;
+        padding-bottom: 7.1875rem;
 
-//     .timeline-container {
-//         .col-12 {
-//             padding: 5.0625rem 4.875rem 5.875rem 17.625rem;
-//         }
-//     }
+        .main-title {
+            font-size: 3rem;
+            line-height: 4.375rem;
+            margin-bottom: 1rem;
+        }
+
+        .schedule-under-h {
+            font-size: 1.25rem;
+            margin-bottom: 3.75rem;
+        }
+    }
+
+    .timeline-container {
+        background: #fff;
+        border-radius: 0.875rem;
+        width: 100%;
+        -webkit-border-radius: 0.875rem;
+        -moz-border-radius: 0.875rem;
+        -ms-border-radius: 0.875rem;
+        -o-border-radius: 0.875rem;
+        box-shadow: 0.3125rem 0.3125rem 3.75rem rgba(0, 0, 0, 0.1);
+
+        .col-12 {
+            padding: 5.0625rem 4.875rem 5.875rem 17.625rem;
+        }
 
 
-// }
+
+        .timeline {
+            left: 12rem;
+            max-width: 70%;
+            margin-right: 0;
+
+            .event {
+                position: relative;
+                top: 0;
+                margin-bottom: 67.7px;
+
+                &:last-of-type {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    border: none;
+                }
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                }
+
+                &:before {
+                    left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;
+                    color: #000;
+                    font-family: 'Gotham Pro', sans-serif;
+                    font-size: 18px;
+                    letter-spacing: 0.002em;
+                    content: attr(data-date);
+                    text-align: right;
+                    font-weight: 100;
+                    min-width: $date;
+                    top: 5px;
+                }
+
+                &:after {
+                    background: $color-primary;
+                    border-radius: 50%;
+                    height: $dot;
+                    width: $dot;
+                    content: "";
+                    top: 10px;
+                }
+
+                .event-hidden-text {
+                    margin-bottom: 1.5625rem;
+                }
+
+            }
+
+            .reg-event {
+                margin-bottom: 48.7px;
+
+                .event-section {
+                    position: relative;
+                    top: -19px;
+                }
+
+                &:after {
+                    background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
+                    border-radius: 50%;
+                    height: $dot*2;
+                    width: $dot*2;
+                    content: "";
+                    z-index: 120;
+                    top: -15px;
+                }
+
+                &:before {
+                    top: -12px;
+                }
+
+            }
+
+            .reg-event {
+                margin-bottom: 48.7px;
+        
+                .event-section {
+                    position: relative;
+                    top: -19px;
+                }
+        
+                &:after {
+                    background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
+                    border-radius: 50%;
+                    height: $dot*2;
+                    width: $dot*2;
+                    content: "";
+                    z-index: 120;
+                    top: -15px;
+                }
+        
+                &:before {
+                    top: -12px;
+                }
+        
+            }
+        
+            .last-event {
+        
+                .event-section {
+                    position: relative;
+                    top: 13px;
+                }
+        
+                &:after {
+                    background: radial-gradient(circle at center, #f56255 0%, #f56255 40%, rgba(245, 98, 85, 0.35) 40%, rgba(245, 98, 85, 0.35) 100%);
+                    border-radius: 50%;
+                    height: $dot*2;
+                    width: $dot*2;
+                    content: "";
+                    z-index: 120;
+                    top: 15px;
+                }
+            }
+        
+            .event-section {
+                font-family: 'Gotham Pro', sans-serif;
+                font-weight: 400;
+                font-size: 1.5rem;
+                letter-spacing: 0.002em;
+            }
+        
+            .event-title {
+                font-size: 1.25rem;
+            }
+        
+            .event-show-more {
+                color: #f56255;
+                cursor: pointer;
+            }
+        }
+    }
+}
