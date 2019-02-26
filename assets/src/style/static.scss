@@ -27,7 +27,8 @@ body {
     color: $white;
 }
 
-.hidden, .modal-hidden {
+.hidden,
+.modal-hidden {
     display: none;
 }
 
@@ -37,6 +38,10 @@ body {
 
 .relative {
     position: relative !important;
+}
+
+.js-btn:hover {
+    box-shadow: inset 0 0 20px 10px rgba($color: rgb(255, 142, 142), $alpha: 0.7)
 }
 
 @media(min-width: 320px) {
@@ -110,7 +115,7 @@ body {
         list-style: none;
         position: relative;
     }
-    
+
 
     .main-title {
         font-family: "Gotham Pro", sans-serif;
@@ -120,7 +125,7 @@ body {
         letter-spacing: 0.002em;
     }
 
-    
+
 }
 
 // img {
